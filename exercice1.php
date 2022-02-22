@@ -1,30 +1,35 @@
 <?php
-declare(strict_types=1);
 
 
-$beverage1 = new beverage('black', 2, 'cold');
 
- class beverage  
+
+
+ class Beverage  
 {
-    public string $color;
-    public float $price;
-    public string $temperature;
+    public  $color;
+    public  $price;
+    public  $temperature;
 
-    public function _construc($color, $price, $temperature)
+    public function __construct ($color, $price, $temperature)
     {
         $this->color = $color;
         $this->price = $price;
-        $this->temperature = $temperature;
+        $this->temperature ='cold';
+        
     }
     public function getInfo()
     {
-        echo "This beverage is $this->temperature and $this->color !";
+         
+        echo "This beverage is $this->temperature and $this->color ! <br>";
     }
-    $beverage1->getInfo();
+    
 }
 
+$cola = new Beverage ('black', 2, '');
+$fanta = new Beverage ('orange', 2, '');
 
-
+$cola -> getInfo();
+$fanta -> getInfo();
 
 
 
