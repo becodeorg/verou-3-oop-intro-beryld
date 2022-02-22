@@ -20,16 +20,18 @@
     public function getInfo()
     {
          
-        echo "This beverage is $this->temperature and $this->color ! <br>";
+        echo "This beverage is {$this->temperature} and {$this->color} ! <br>";
     }
     
 }
 
 $cola = new Beverage ('black', 2 );
 $fanta = new Beverage ('orange', 2);
+$tea = new Beverage("green", 3, "hot");
 
 $cola -> getInfo();
 $fanta -> getInfo();
+$tea -> getInfo();
 
 
 
