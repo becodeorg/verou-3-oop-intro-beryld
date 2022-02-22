@@ -10,11 +10,11 @@
     public  $price;
     public  $temperature;
 
-    public function __construct ($color, $price, $temperature)
+    public function __construct ($color, $price, $temperature="cold")
     {
         $this->color = $color;
         $this->price = $price;
-        $this->temperature ='cold';
+        $this->temperature =$temperature;
         
     }
     public function getInfo()
@@ -25,8 +25,8 @@
     
 }
 
-$cola = new Beverage ('black', 2, '');
-$fanta = new Beverage ('orange', 2, '');
+$cola = new Beverage ('black', 2 );
+$fanta = new Beverage ('orange', 2);
 
 $cola -> getInfo();
 $fanta -> getInfo();
